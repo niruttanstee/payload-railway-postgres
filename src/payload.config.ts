@@ -6,6 +6,7 @@ import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import { buildConfig } from 'payload/config'
 
+import { Media } from './collections/Media'
 import Users from './collections/Users'
 import Services from './collections/Services'
 
@@ -16,7 +17,7 @@ export default buildConfig({
   bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Services],
+  collections: [Media, Users, Services],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },

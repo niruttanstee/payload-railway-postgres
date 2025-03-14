@@ -17,6 +17,18 @@ const Services: CollectionConfig = {
         type: 'textarea',
         required: true,
         maxLength: 255,
+    },
+    {
+        name: 'category',
+        type: 'select',
+        options: [
+            'design', 'develop', 'support'
+        ],
+    },
+    {
+        name: 'icon',
+        type: 'upload',
+        relationTo: 'media',
     }
   ],
 }
